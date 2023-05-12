@@ -64,19 +64,23 @@ function displayFunction() {
     }
 }
 
+// checks if chosen answer is correct and then change question
 function showAnswer(event) {
     if (event.target.className === 'answer' && event.target.textContent === questionList[qIndex].answer) {
-        console.log("correct answer")
+        console.log("correct answer");
+        console.log(qIndex);
     } else {
-        console.log('wrong answer')
-    }
-    //var currentQuestion = questionList[qIndex];
-   // for (var correctAnswer of choices) {
-      //  if (correctAnswer.match(currentQuestion.answer)) {
-       //     console.log('correct answer')
-       // }
-  //  }
+        console.log('wrong answer');
+        console.log(qIndex);
+    };
 
+    if (qIndex < 2) {
+        qIndex++; // increments the pointer to reference the next question
+        displayFunction(); // recalls function to display next question
+    }
+   
+  // when final question is displayed prevent qIndex from incrementing; stop increments when qIndex = 2
+    
 }
 
 // add event listener; use .matches element -  element.matches('button') to check text.content
