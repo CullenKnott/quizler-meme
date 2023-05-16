@@ -1,8 +1,8 @@
 :root {
-    --grey: #282828;
-    --dark-blue: #190061;
-    --blue: #240090;
-    --light-blue: #3500d3;
+    --grey: #e3e2df;
+    --dark-blue: #5d001e;
+    --blue: #9a1750;
+    --light-blue: #f695c5;
 }
 
 html {
@@ -13,7 +13,7 @@ body {
     font-family: 'Nunito', sans-serif;
     font-size: 1.75rem;
     line-height: 1.5;
-    color: whitesmoke;
+    color: black;
     background-color: var(--grey);
     text-align: center;
 }
@@ -40,7 +40,7 @@ h1, h2 {
 }
 
 .answer {
-    width: 10rem;
+    width: fit-content;
 }
 
 .answerBtn-container {
@@ -55,23 +55,33 @@ h1, h2 {
     justify-content: center;
     display: flex;
     flex-flow: column;
+    text-align: center;
 }
 
 button {
-    color: whitesmoke;
+    color: var(--grey);
     background-color: var(--dark-blue);
-    padding: 2rem 10rem;
+    padding: 2rem 14rem;
     margin: 5px;
-    text-align: left;
+    text-align: center;
     border-color: var(--dark-blue);
     border: none;
     display: inline-block;
     overflow: auto;
     white-space: nowrap;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
 button:hover {
     background-color: var(--blue);
     border-color: var(--blue);
     box-shadow: 0 0 15px var(--light-blue);
+}
+
+#user-score {
+    background-color: #c6c8ca;
+    padding: 1rem 8rem;
+    box-shadow: 0px 1px 6px 0px grey;
+    font-size: 2rem;
 }

@@ -11,7 +11,7 @@ var sumbitBtn = document.querySelector('#submit');
 var scoreCard = document.querySelector('.score-card');
 var viewScore = document.querySelector('#highScore');
 var backBtn = document.querySelector('#backBtn');
-var secondsLeft = 10;
+var secondsLeft = 40;
 var scoreEl = document.querySelector('#score');
 var msgDiv = document.querySelector('#msg');
 var userScore = document.querySelector('#user-score')
@@ -53,7 +53,7 @@ function title() {
     highscoreBtn.classList.remove('hide');
     startBtn.classList.remove('hide');
     scoreCard.classList.add('hide');
-    secondsLeft = 10; // reset timer
+    secondsLeft = 40; // reset timer
     score = 0; // reset score
     qIndex = 0; // resets pointer 
 }
@@ -115,6 +115,9 @@ function showAnswer(event) {
     if (qIndex < 2) {
         qIndex++; // increments the pointer to reference the next question
         displayFunction(); // recalls function to display next question
+    } else {
+        displayForm()
+        clearInterval(timeInt)
     }
 }
 
@@ -126,7 +129,7 @@ function displayForm() {
     scoreEl.textContent = score;
 }
 
-// displays the
+// displays the saved scores 
 function displayScore() {
     formEl.classList.add('hide');
     scoreCard.classList.remove('hide');
@@ -175,6 +178,6 @@ backBtn.addEventListener('click', title)
 
 clearBtn.addEventListener('click', function() {
     localStorage.clear();
-    userScore.textContent = ""
+    userScore.textContent = "Nothing here!"
     displayScore();
 })
