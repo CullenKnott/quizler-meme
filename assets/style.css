@@ -1,3 +1,40 @@
+:root {
+    --grey: #282828;
+    --dark-blue: #190061;
+    --blue: #240090;
+    --light-blue: #3500d3;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: whitesmoke;
+    background-color: var(--grey);
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.scoreBtn-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+h1, h2 {
+    margin-bottom: 0.625rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
 .hide {
     display: none;
 }
@@ -10,15 +47,31 @@
     align-items: center;
 }
 
+.questions-container {
+    justify-content: center;
+}
+
+.answerBtn-container {
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+}
+
 button {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: whitesmoke;
-    background-color: rgb(0, 21, 255);
-    border-radius: 5px 5px 5px 5px;
-    padding: 10px;
-    align-items: center;
+    background-color: var(--dark-blue);
+    padding: 2rem 10rem;
+    margin: 5px;
+    text-align: left;
+    border-color: var(--dark-blue);
+    border: none;
+    display: inline-block;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 button:hover {
-    background-color: rgb(0, 144, 254);
+    background-color: var(--blue);
+    border-color: var(--blue);
+    box-shadow: 0 0 15px var(--light-blue);
 }
