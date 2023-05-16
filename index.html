@@ -5,15 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
   <body>
     <header>
       <div class="scoreBtn-container">
         <button id="highScore">View high score</button>
       </div>
-        <div class = "title-page">Coding Quiz Challenge</div>
+        <h1 class = "title-page">Coding Quiz Challenge</h1>
         <div class="time-container hide">
-            Time
+            Time Remaining
             <span id="time">100</span>
         </div>
         <button class="start-quizBtn" id="start-quiz">Start Quiz</button>
@@ -27,12 +29,35 @@
             <button class="answer" id="answer3"></button>
             <button class="answer" id="answer4"></button>
         </div>
-        <div class="right-wrong"></div>
+        <div class="right-wrong">
+          <p id="right-wrong"></p>
+        </div>
     </section>
-    <section class="">
 
+    <section class="form-card hide">
+        <h2>Quiz Completed</h2>
+        <h2>Score:
+          <span id="score">0</span>
+        </h2>
+        <h3>Fill out the form below to save your score!</h3>
+        <form method="POST">
+          <div class="input-initials">
+            <label for="initials">Initials</label>
+            <input type="text" name="initials" id="initials" placeholder="Enter initials here!">
+          </div>
+          <div id="msg"></div>
+          <button id="submit">Submit</button>
+          </form>
     </section>
 
+    <section class="score-card hide">
+      <div class="display-score">
+        <h2>High scores</h2>
+        <p><span id="user-score"></span></p>
+      </div>
+      <button id="backBtn">Back</button>
+      <button id="clearBtn">Clear high score</button>
+    </section>
     <script src="./assets/script.js"></script>
   </body>
   
