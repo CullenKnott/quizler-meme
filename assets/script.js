@@ -102,13 +102,10 @@ function showAnswer(event) {
         console.log("correct answer");
         score +=10; //adds 10 points for every correct answer
         rightWrong.textContent = "Correct!";
-        console.log(qIndex);
-        console.log(score);
     } else {
         console.log('wrong answer');
         rightWrong.textContent = "Wrong!";
         secondsLeft -=10; // subracts time when answer is incorrect
-        console.log(qIndex);
     };
 
     // when final question is displayed prevent qIndex from incrementing; stop increments when qIndex = 2
