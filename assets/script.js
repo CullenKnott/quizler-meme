@@ -20,7 +20,7 @@ var score = 0;
 var quizEnd = false;
 let timeInt
 var qIndex = 0
-var questionList = [
+var questionList = [ // questions provided by Rene trevino
     {
         question: "Which built-in method calls a function for each element in the array?",
         answeropt: ["A - while()", "B - loop()", "C - forEach()", "D - None of the above."],
@@ -48,7 +48,7 @@ var choiceBtn = document.querySelectorAll('.answer');
 var answerContainer = document.querySelector('.answerBtn-container');
 
 // displays Title page when back button is clickec
-function title() {
+function title() { // ClassList items provided by Rene
     titlePage.classList.remove('hide');
     highscoreBtn.classList.remove('hide');
     startBtn.classList.remove('hide');
@@ -71,7 +71,7 @@ function startQuiz() {
 }
 
 // countdown timer
-function startTimer() {
+function startTimer() { // Rene Trevino
     timeInt = setInterval(function(){
         secondsLeft--
         timeEl.textContent = secondsLeft
@@ -83,7 +83,7 @@ function startTimer() {
 }
 
 // displays question based on the pointer qIndex
-function displayFunction() {
+function displayFunction() { // Rene Trevino
     var currentQuestion = questionList[qIndex];
     displayQuestion.textContent = currentQuestion.question;
     var answers = currentQuestion.answeropt;
@@ -98,7 +98,7 @@ function displayFunction() {
 // checks if chosen answer is correct and then change question
 //display on screen whether the chosen answer is right or wrong
 function showAnswer(event) {
-    if (event.target.className === 'answer' && event.target.textContent === questionList[qIndex].answer) {
+    if (event.target.className === 'answer' && event.target.textContent === questionList[qIndex].answer) { // <if> statement comparing answers provided by Amir
         console.log("correct answer");
         score +=10; //adds 10 points for every correct answer
         rightWrong.textContent = "Correct!";
@@ -144,7 +144,7 @@ function displayScore() {
         return;
     }
 
-    userScore.textContent = initials +" " + scores
+    userScore.textContent = initials +" - " + scores
 }
 
 function displayMessage(type, message) {
